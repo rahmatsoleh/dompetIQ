@@ -1,5 +1,7 @@
+import 'package:dompet_iq/pages/login_page.dart';
 import 'package:dompet_iq/theme_app.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class OnboardingPage extends StatelessWidget {
   static const String routeName = "onboarding";
@@ -28,7 +30,7 @@ class OnboardingPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
+                  horizontal: 20,
                   vertical: 32,
                 ),
                 decoration: BoxDecoration(
@@ -47,7 +49,9 @@ class OnboardingPage extends StatelessWidget {
                     ),
                     SizedBox(height: 50),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.goNamed(LoginPage.routeName);
+                      },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 30,
@@ -56,6 +60,14 @@ class OnboardingPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: petalRouge,
                           borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.25),
+                              spreadRadius: 0,
+                              blurRadius: 4,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
                         ),
                         child: Text(
                           "Get Started",

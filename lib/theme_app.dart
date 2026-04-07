@@ -28,6 +28,12 @@ TextStyle poppinsRegluar16 = GoogleFonts.poppins(
   color: greyText,
 );
 
+TextStyle poppinsMedium16 = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  color: greyText,
+);
+
 TextStyle poppinsRegular14 = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w400,
