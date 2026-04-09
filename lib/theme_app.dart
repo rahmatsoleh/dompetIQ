@@ -22,10 +22,46 @@ TextStyle robotoSemibold32 = GoogleFonts.roboto(
   color: darkText,
 );
 
+TextStyle poppinsSemibold32 = GoogleFonts.poppins(
+  fontSize: 32,
+  fontWeight: FontWeight.w600,
+  color: darkText,
+);
+
+TextStyle poppinsSemibold48 = GoogleFonts.poppins(
+  fontSize: 48,
+  fontWeight: FontWeight.w600,
+  color: darkText,
+);
+
+TextStyle poppinsSemibold16 = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+  color: darkText,
+);
+
 TextStyle poppinsRegluar16 = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w400,
   color: greyText,
+);
+
+TextStyle poppinsMedium14 = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: darkText,
+);
+
+TextStyle poppinsMedium24 = GoogleFonts.poppins(
+  fontSize: 24,
+  fontWeight: FontWeight.w500,
+  color: darkText,
+);
+
+TextStyle poppinsMedium20 = GoogleFonts.poppins(
+  fontSize: 20,
+  fontWeight: FontWeight.w500,
+  color: darkText,
 );
 
 TextStyle poppinsMedium16 = GoogleFonts.poppins(
@@ -36,6 +72,12 @@ TextStyle poppinsMedium16 = GoogleFonts.poppins(
 
 TextStyle poppinsRegular14 = GoogleFonts.poppins(
   fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: greyText,
+);
+
+TextStyle poppinsReglar12 = GoogleFonts.poppins(
+  fontSize: 12,
   fontWeight: FontWeight.w400,
   color: greyText,
 );

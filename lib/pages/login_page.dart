@@ -1,5 +1,7 @@
+import 'package:dompet_iq/pages/screens/main_screen.dart';
 import 'package:dompet_iq/theme_app.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   static const String routeName = "login";
@@ -47,7 +49,9 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.goNamed(MainScreen.routeName);
+                },
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 36,
