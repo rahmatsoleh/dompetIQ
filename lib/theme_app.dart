@@ -22,6 +22,12 @@ TextStyle robotoSemibold32 = GoogleFonts.roboto(
   color: darkText,
 );
 
+TextStyle poppinsBold18 = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: darkText,
+);
+
 TextStyle poppinsSemibold32 = GoogleFonts.poppins(
   fontSize: 32,
   fontWeight: FontWeight.w600,
