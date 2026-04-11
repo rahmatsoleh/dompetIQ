@@ -1,3 +1,4 @@
+import 'package:dompet_iq/pages/chart_detail_page.dart';
 import 'package:dompet_iq/pages/login_page.dart';
 import 'package:dompet_iq/pages/onboarding_page.dart';
 import 'package:dompet_iq/pages/screens/main_screen.dart';
@@ -26,6 +27,11 @@ final GoRouter appRouter = GoRouter(
       path: "/transaction",
       name: TransactionPage.routeName,
       builder: (context, state) => const TransactionPage(),
+    ),
+    GoRoute(
+      path: "/chart-detail",
+      name: ChartDetailPage.routeName,
+      builder: (context, state) => const ChartDetailPage(),
     ),
   ],
 );

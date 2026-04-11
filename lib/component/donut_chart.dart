@@ -1,6 +1,8 @@
 import 'dart:math';
+import 'package:dompet_iq/pages/chart_detail_page.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../theme_app.dart';
 
@@ -65,7 +67,7 @@ class DonutChart extends StatelessWidget {
                         value: item["value"].toDouble(),
                         radius: 70,
                         title:
-                            "${percentage}%", // kosongkan (kita tampilkan di luar)
+                            "$percentage%", // kosongkan (kita tampilkan di luar)
                       );
                     }),
                   ),
@@ -110,7 +112,9 @@ class DonutChart extends StatelessWidget {
             final persenToDouble = item["value"] / total;
 
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                context.pushNamed(ChartDetailPage.routeName);
+              },
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -124,7 +128,7 @@ class DonutChart extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "(${percentage}%) ${item['title']}",
+                            "($percentage%) ${item['title']}",
                             style: poppinsRegular14,
                           ),
                           LinearPercentIndicator(

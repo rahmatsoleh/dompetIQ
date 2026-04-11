@@ -33,7 +33,6 @@ class _SpedometerGaugeState extends State<SpedometerGauge>
 
   @override
   void didUpdateWidget(covariant SpedometerGauge oldWidget) {
-    // TODO: implement didUpdateWidget
     super.didUpdateWidget(oldWidget);
 
     if (oldWidget.percentage != widget.percentage) {
@@ -50,7 +49,6 @@ class _SpedometerGaugeState extends State<SpedometerGauge>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _controller.dispose();
     super.dispose();
   }
@@ -138,7 +136,6 @@ class GaugePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant GaugePainter oldDelegate) {
-    // TODO: implement shouldRepaint
     return oldDelegate.percentage != percentage || oldDelegate.color != color;
   }
 }
