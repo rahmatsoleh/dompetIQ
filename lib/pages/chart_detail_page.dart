@@ -1,3 +1,4 @@
+import 'package:dompet_iq/component/linear_chart.dart';
 import 'package:dompet_iq/model/transaction_model.dart';
 import 'package:dompet_iq/theme_app.dart';
 import 'package:dompet_iq/utils/group_data.dart';
@@ -69,10 +70,17 @@ class _ChartDetailPageState extends State<ChartDetailPage> {
         ],
       ),
       body: SafeArea(
-        child: SingleChildScrollView(child: Column(children: [
-              
-            ],
-          )),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: SizedBox(height: 250, child: LinearChart()),
+              ),
+            ),
+            // SliverList(delegate: delegate)
+          ],
+        ),
       ),
     );
   }
