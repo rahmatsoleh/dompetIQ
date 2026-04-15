@@ -18,7 +18,7 @@ List<GroupedTransaction> groupByDate(List<TransactionModel> list) {
   Map<String, List<TransactionModel>> map = {};
 
   for (var item in list) {
-    final key = "${item.date}_${item.category}";
+    // final key = "${item.date}_${item.category}";
     map.putIfAbsent(item.date, () => []).add(item);
   }
 

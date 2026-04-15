@@ -9,6 +9,8 @@ Color lightBlue = const Color(0xFFB3DEE2);
 Color darkText = const Color(0xFF1E1E1E);
 Color greyText = const Color(0xFF868686);
 Color whiteColor = const Color(0xFFFFFFFF);
+Color greenColor = const Color(0XFF79AE6F);
+Color redColor = const Color(0xFFCE2626);
 
 TextStyle robotoSemibold42 = GoogleFonts.roboto(
   fontSize: 42,
@@ -28,6 +30,12 @@ TextStyle poppinsBold18 = GoogleFonts.poppins(
   color: darkText,
 );
 
+TextStyle poppinsBold16 = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.bold,
+  color: darkText,
+);
+
 TextStyle poppinsSemibold32 = GoogleFonts.poppins(
   fontSize: 32,
   fontWeight: FontWeight.w600,
@@ -40,13 +48,19 @@ TextStyle poppinsSemibold48 = GoogleFonts.poppins(
   color: darkText,
 );
 
+TextStyle poppinsSemibold18 = GoogleFonts.poppins(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+  color: darkText,
+);
+
 TextStyle poppinsSemibold16 = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w600,
   color: darkText,
 );
 
-TextStyle poppinsRegluar16 = GoogleFonts.poppins(
+TextStyle poppinsRegular16 = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w400,
   color: greyText,
@@ -82,7 +96,7 @@ TextStyle poppinsRegular14 = GoogleFonts.poppins(
   color: greyText,
 );
 
-TextStyle poppinsReglar12 = GoogleFonts.poppins(
+TextStyle poppinsRegular12 = GoogleFonts.poppins(
   fontSize: 12,
   fontWeight: FontWeight.w400,
   color: greyText,

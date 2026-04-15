@@ -1,3 +1,4 @@
+import 'package:dompet_iq/pages/category_page.dart';
 import 'package:dompet_iq/pages/chart_detail_page.dart';
 import 'package:dompet_iq/pages/login_page.dart';
 import 'package:dompet_iq/pages/onboarding_page.dart';
@@ -32,6 +33,11 @@ final GoRouter appRouter = GoRouter(
       path: "/chart-detail",
       name: ChartDetailPage.routeName,
       builder: (context, state) => const ChartDetailPage(),
+    ),
+    GoRoute(
+      path: "/category",
+      name: CategoryPage.routeName,
+      builder: (context, state) => CategoryPage(),
     ),
   ],
 );

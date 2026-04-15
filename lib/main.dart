@@ -7,6 +7,7 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(statusBarColor: petalFrost),
   );
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 

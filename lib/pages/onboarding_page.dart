@@ -71,7 +71,7 @@ class OnboardingPage extends StatelessWidget {
                         ),
                         child: Text(
                           "Get Started",
-                          style: poppinsRegluar16.copyWith(color: whiteColor),
+                          style: poppinsRegular16.copyWith(color: whiteColor),
                         ),
                       ),
                     ),

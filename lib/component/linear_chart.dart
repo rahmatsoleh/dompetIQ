@@ -53,15 +53,15 @@ class _LinearChartState extends State<LinearChart> {
               getTitlesWidget: (value, meta) {
                 switch (value.toInt()) {
                   case 0:
-                    return Text("Sen");
+                    return Text("1-7");
                   case 1:
-                    return Text("Sel");
+                    return Text("8-14");
                   case 2:
-                    return Text("Rab");
+                    return Text("15-21");
                   case 3:
-                    return Text("Kam");
+                    return Text("22-28");
                   case 4:
-                    return Text("Jum");
+                    return Text("29-30");
                 }
                 return Text("");
               },
@@ -69,7 +69,7 @@ class _LinearChartState extends State<LinearChart> {
           ),
           leftTitles: AxisTitles(
             sideTitles: SideTitles(
-              showTitles: true,
+              showTitles: false,
               interval: 1,
               reservedSize: 20,
               maxIncluded: false,
@@ -90,14 +90,15 @@ class _LinearChartState extends State<LinearChart> {
             dotData: FlDotData(show: true),
             belowBarData: BarAreaData(
               show: true,
-              gradient: LinearGradient(
-                colors: [
-                  petalRouge.withOpacity(0.8),
-                  petalRouge.withOpacity(0.1),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
+              color: petalFrost,
+              // gradient: LinearGradient(
+              //   colors: [
+              //     petalRouge.withOpacity(0.8),
+              //     petalRouge.withOpacity(0.1),
+              //   ],
+              //   begin: Alignment.topCenter,
+              //   end: Alignment.bottomCenter,
+              // ),
             ),
             spots: spots,
           ),
@@ -105,7 +106,7 @@ class _LinearChartState extends State<LinearChart> {
 
         lineTouchData: LineTouchData(
           enabled: true,
-          handleBuiltInTouches: true,
+          handleBuiltInTouches: false,
 
           touchTooltipData: LineTouchTooltipData(
             tooltipPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
@@ -115,7 +116,7 @@ class _LinearChartState extends State<LinearChart> {
               return touchedSpots.map((spot) {
                 return LineTooltipItem(
                   spot.y.toInt().toString(), // 👈 nilai dari Y axis
-                  poppinsReglar12,
+                  poppinsRegular12,
                 );
               }).toList();
             },

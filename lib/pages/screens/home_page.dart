@@ -6,6 +6,7 @@ import 'dart:math' as math;
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class HomePage extends StatelessWidget {
+  static const String routeName = "home";
   const HomePage({super.key});
 
   @override
@@ -51,7 +52,7 @@ class HomePage extends StatelessWidget {
           children: [
             Text("Hello Rahmat Soleh,", style: poppinsSemibold32),
             SizedBox(height: 8),
-            Text("Welcome back", style: poppinsRegluar16),
+            Text("Welcome back", style: poppinsRegular16),
           ],
         ),
       );
@@ -108,7 +109,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       "Income",
-                      style: poppinsReglar12.copyWith(color: whiteColor),
+                      style: poppinsRegular12.copyWith(color: whiteColor),
                     ),
                     Text(
                       "12.000.000",
@@ -140,7 +141,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       "Expenses",
-                      style: poppinsReglar12.copyWith(color: whiteColor),
+                      style: poppinsRegular12.copyWith(color: whiteColor),
                     ),
                     Text(
                       "8.500.000",

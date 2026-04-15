@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
-                child: Text("Guest Mode", style: poppinsRegluar16),
+                child: Text("Guest Mode", style: poppinsRegular16),
               ),
             ],
           ),

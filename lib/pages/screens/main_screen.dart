@@ -110,7 +110,7 @@ class _MainScreenState extends State<MainScreen> {
           SizedBox(height: 4),
           Text(
             label,
-            style: poppinsReglar12.copyWith(
+            style: poppinsRegular12.copyWith(
               color: isActive ? petalRouge : greyText,
               fontWeight: isActive ? FontWeight.bold : FontWeight.w400,
             ),

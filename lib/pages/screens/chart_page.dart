@@ -3,6 +3,7 @@ import 'package:dompet_iq/theme_app.dart';
 import 'package:flutter/material.dart';
 
 class ChartPage extends StatefulWidget {
+  static const String routeName = "chart";
   const ChartPage({super.key});
 
   @override
@@ -110,7 +111,7 @@ class _ChartPageState extends State<ChartPage> {
                   item,
                   style: _transactionType == item
                       ? poppinsMedium16.copyWith(color: whiteColor)
-                      : poppinsRegluar16,
+                      : poppinsRegular16,
                 ),
               ),
             );

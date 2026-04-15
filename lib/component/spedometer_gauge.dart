@@ -48,7 +48,14 @@ class _SpedometerGaugeState extends State<SpedometerGauge>
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!mounted) return;
+  }
+
+  @override
   void dispose() {
+    _controller.stop(); // 🔥 penting
     _controller.dispose();
     super.dispose();
   }
@@ -71,32 +78,36 @@ class _SpedometerGaugeState extends State<SpedometerGauge>
       child: AnimatedBuilder(
         animation: _animation,
         builder: (context, _) {
+          if (!mounted) return const SizedBox();
+
           final value = _animation.value;
 
-          return Stack(
-            alignment: Alignment.center,
-            children: [
-              CustomPaint(
-                size: Size(250, 250),
-                painter: GaugePainter(
-                  percentage: value,
-                  color: getColor(value),
+          return RepaintBoundary(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CustomPaint(
+                  size: Size(250, 250),
+                  painter: GaugePainter(
+                    percentage: value,
+                    color: getColor(value),
+                  ),
                 ),
-              ),
-              Transform.translate(
-                offset: Offset(0, 20),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Performance", style: poppinsRegular14),
-                    Text("${value.toInt()}%", style: poppinsSemibold48),
-                    Text("Total Balance", style: poppinsRegular14),
-                    Text("12.000.000", style: poppinsSemibold32),
-                  ],
+                Transform.translate(
+                  offset: Offset(0, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Performance", style: poppinsRegular14),
+                      Text("${value.toInt()}%", style: poppinsSemibold48),
+                      Text("Total Balance", style: poppinsRegular14),
+                      Text("12.000.000", style: poppinsSemibold32),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           );
         },
       ),
