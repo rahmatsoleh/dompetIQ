@@ -26,7 +26,7 @@ class OnboardingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/images/money.png", width: double.infinity),
+              Image.asset("assets/images/money.png", fit: BoxFit.contain),
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
@@ -43,7 +43,7 @@ class OnboardingPage extends StatelessWidget {
                     Text("Welcome", style: robotoSemibold32),
                     SizedBox(height: 32),
                     Text(
-                      "Start taking control of your finances today. Record, undserstand, and manage every expense so you can live a more peaceful and purposeful life.",
+                      "Start taking control of your finances today. Record, understand, and manage every expense so you can live a more peaceful and purposeful life.",
                       style: poppinsRegular14,
                       textAlign: TextAlign.center,
                     ),
